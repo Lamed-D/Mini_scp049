@@ -25,13 +25,26 @@
 
         private void Start()
         {
-            player.Scale *= Mini_scp049.Instance.Config.Size;
-
             if (Mini_scp049.Instance.Config.ShowSpawnBroadcastMessage)
             {
                 player.ClearBroadcasts();
                 player.Broadcast(Mini_scp049.Instance.Config.SpawnBroadcastMessageDuration, string.Format(Mini_scp049.Instance.Config.SpawnBroadcastMessage));
             }
+
+            Timing.CallDelayed(1.5f, () =>
+            {
+                player.Scale *= Mini_scp049.Instance.Config.Size;
+            });
+
+            Timing.CallDelayed(5f, () =>
+            {
+                player.MaxHealth = Mini_scp049.Instance.Config.SCP049Health;
+            });
+
+            Timing.CallDelayed(5.5f, () =>
+            {
+                player.Health = Mini_scp049.Instance.Config.SCP049Health;
+            });
         }
 
         private void Update()
@@ -42,8 +55,8 @@
                 return;
             }
 
-            if (!scp207.Enabled)
-                player.EnableEffect<Scp207>();
+            //if (!scp207.Enabled)
+               // player.EnableEffect<Scp207>();
         }
 
         private void OnDestroy() => PartiallyDestroy();

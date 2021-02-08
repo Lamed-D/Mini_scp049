@@ -14,7 +14,7 @@ namespace Mini_scp049
         public bool IsEnabled { get; set; } = true;
 
         [Description("The size multiplier for 49")]
-        public float Size { get; private set; } = 0.5f;
+        public float Size { get; private set; } = 0.65f;
 
         [Description("Whether or not to show a broadcast message to 049 when he spawns, explaining this plugin to them.")]
         public bool ShowSpawnBroadcastMessage { get; private set; } = true;
@@ -25,6 +25,7 @@ namespace Mini_scp049
         [Description("The message to broadcast to the 049.")]
         public string SpawnBroadcastMessage { get; private set; } =
             "당신은 미니 SCP-049입니다!";
+        public int SCP049Health { get; set; } = 350;
     }
 
 }
