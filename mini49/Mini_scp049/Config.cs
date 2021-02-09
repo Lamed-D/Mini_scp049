@@ -25,7 +25,7 @@ namespace Mini_scp049
         [Description("The message to broadcast to the 049.")]
         public string SpawnBroadcastMessage { get; private set; } =
             "당신은 미니 SCP-049입니다!";
-        public int SCP049Health { get; set; } = 350;
+        public int SCP049Health { get; set; } = 500;
     }
 
 }

@@ -36,13 +36,9 @@
                 player.Scale *= Mini_scp049.Instance.Config.Size;
             });
 
-            Timing.CallDelayed(5f, () =>
+            Timing.CallDelayed(10f, () =>
             {
                 player.MaxHealth = Mini_scp049.Instance.Config.SCP049Health;
-            });
-
-            Timing.CallDelayed(5.5f, () =>
-            {
                 player.Health = Mini_scp049.Instance.Config.SCP049Health;
             });
         }
